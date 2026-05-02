@@ -1,0 +1,357 @@
+@import "tailwindcss";
+
+/* ══════════════════════════════════════════
+   DESIGN TOKENS
+   ══════════════════════════════════════════ */
+:root {
+  --color-deep-green: #17483A;
+  --color-calm-green: #6F8F7A;
+  --color-soft-green: #A7BFA8;
+  --color-warm-beige: #D9C39A;
+  --color-ivory: #F7F1E6;
+  --color-white: #FFFFFF;
+  --color-ink: #1F2A24;
+
+  --background: var(--color-ivory);
+  --foreground: var(--color-ink);
+  --brand-deep: var(--color-deep-green);
+  --brand-calm: var(--color-calm-green);
+  --brand-light: var(--color-soft-green);
+  --brand-warm: var(--color-warm-beige);
+  --brand-ivory: var(--color-ivory);
+  --brand-paper: #fffcf5;
+  --brand-line: rgba(23, 72, 58, 0.12);
+
+  /* Spacing */
+  --radius-card: 2rem;
+  --radius-btn: 999px;
+
+  /* Shadows */
+  --shadow-card: 0 8px 32px rgba(23, 72, 58, 0.07);
+  --shadow-card-hover: 0 24px 64px rgba(23, 72, 58, 0.14);
+  --shadow-float: 0 20px 60px rgba(23, 72, 58, 0.16);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand-deep: var(--brand-deep);
+  --color-brand-calm: var(--brand-calm);
+  --color-brand-light: var(--brand-light);
+  --color-brand-warm: var(--brand-warm);
+  --color-brand-ivory: var(--brand-ivory);
+  --color-brand-paper: var(--brand-paper);
+  --color-brand-line: var(--brand-line);
+  --font-sans: var(--font-tajawal);
+}
+
+/* ══════════════════════════════════════════
+   BASE
+   ══════════════════════════════════════════ */
+html {
+  scroll-padding-top: 72px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+body {
+  background:
+    radial-gradient(ellipse at top right, rgba(217, 195, 154, 0.20) 0%, transparent 55%),
+    radial-gradient(ellipse at bottom left, rgba(23, 72, 58, 0.04) 0%, transparent 50%),
+    var(--background);
+  color: var(--foreground);
+  font-family: var(--font-tajawal), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+
+::selection {
+  background: var(--brand-warm);
+  color: var(--brand-deep);
+}
+
+/* ══════════════════════════════════════════
+   TYPOGRAPHY SCALE
+   ══════════════════════════════════════════ */
+h1, h2, h3, h4 {
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+/* ══════════════════════════════════════════
+   SCROLLBAR
+   ══════════════════════════════════════════ */
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar { display: none; }
+
+/* Thin styled scrollbar for non-hidden elements */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: rgba(23, 72, 58, 0.2);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover { background: rgba(23, 72, 58, 0.35); }
+
+/* ══════════════════════════════════════════
+   FOCUS RING (accessibility)
+   ══════════════════════════════════════════ */
+:focus-visible {
+  outline: 2px solid var(--brand-deep);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ══════════════════════════════════════════
+   KEYFRAME ANIMATIONS
+   ══════════════════════════════════════════ */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.94); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-6px); }
+}
+
+@keyframes pulse-ring {
+  0%   { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(23, 72, 58, 0.4); }
+  70%  { transform: scale(1);    box-shadow: 0 0 0 10px rgba(23, 72, 58, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(23, 72, 58, 0); }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ══════════════════════════════════════════
+   UTILITY CLASSES
+   ══════════════════════════════════════════ */
+
+/* Float animation for decorative elements */
+.animate-float { animation: float 4s ease-in-out infinite; }
+
+/* Shimmer for loading states */
+.animate-shimmer {
+  background: linear-gradient(90deg, #f0ebe0 25%, #e8e0cf 50%, #f0ebe0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Pulse ring for WhatsApp / call buttons */
+.animate-pulse-ring { animation: pulse-ring 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite; }
+
+/* ══════════════════════════════════════════
+   SCROLL-REVEAL (Intersection Observer)
+   ══════════════════════════════════════════ */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ══════════════════════════════════════════
+   GLASS CARD UTILITY
+   ══════════════════════════════════════════ */
+.glass-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.glass-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-4px);
+}
+
+/* ══════════════════════════════════════════
+   SECTION SPACING
+   ══════════════════════════════════════════ */
+@media (max-width: 639px) {
+  section { scroll-margin-top: 60px; }
+}
+
+/* ══════════════════════════════════════════
+   MOBILE TOUCH IMPROVEMENTS
+   ══════════════════════════════════════════ */
+@media (hover: none) {
+  /* Faster tap feedback on touch devices */
+  button, a {
+    -webkit-tap-highlight-color: rgba(23, 72, 58, 0.08);
+  }
+}
+
+/* ══════════════════════════════════════════
+   IMAGE OPTIMIZATION
+   ══════════════════════════════════════════ */
+img {
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* ══════════════════════════════════════════
+   KEYFRAME ANIMATIONS
+   ══════════════════════════════════════════ */
+
+/* Scale in — used by StorySection content panel, MobileBottomNav active pill, Gallery masonry cards */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Slide up — used by LiveReviewsSection review cards, StorySection text */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade in — used by Lightbox backdrop, gallery overlays */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Shimmer — loading placeholder skeleton */
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent 30%, rgba(23,72,58,0.06) 50%, transparent 70%);
+  background-size: 200% 100%;
+  animation: shimmer 1.8s ease-in-out infinite;
+}
+
+/* Pulse ring — used by floating buttons */
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+/* Marquee — infinite scrolling testimonial strip */
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-container {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+}
+
+.marquee-track {
+  animation: marquee-scroll 30s linear infinite;
+  width: max-content;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* ══════════════════════════════════════════
+   KEYFRAME ANIMATIONS
+   ══════════════════════════════════════════ */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+@keyframes kenBurns {
+  from { transform: scale(1.08); }
+  to   { transform: scale(1.00); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ══════════════════════════════════════════
+   PRINT STYLES
+   ══════════════════════════════════════════ */
+@media print {
+  header, footer, nav, .no-print { display: none !important; }
+  body { background: white; color: black; }
+}
+

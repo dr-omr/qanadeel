@@ -13,7 +13,7 @@ export async function POST(req: Request) {
 
     await resend.emails.send({
       // Free tier: must use onboarding@resend.dev as sender
-      from: "روضة قناديل العلم <onboarding@resend.dev>",
+      from: "مدرسة قناديل العلم (مرحلة الروضة) <onboarding@resend.dev>",
       // Change this to your verified Resend email / inbox
       to: ["qanadeel@moe.om"],
       replyTo: mobile ? `${name} <noreply@example.com>` : undefined,
@@ -27,7 +27,7 @@ export async function POST(req: Request) {
     
     <!-- Header -->
     <div style="background:#17483A;padding:28px 32px;text-align:center;">
-      <h1 style="margin:0;color:#D9C39A;font-size:20px;font-weight:800;">روضة قناديل العلم</h1>
+      <h1 style="margin:0;color:#D9C39A;font-size:20px;font-weight:800;">مدرسة قناديل العلم (مرحلة الروضة)</h1>
       <p style="margin:6px 0 0;color:rgba(255,255,255,0.7);font-size:13px;">طلب جديد من الموقع الرسمي</p>
     </div>
 
@@ -74,7 +74,7 @@ export async function POST(req: Request) {
     <!-- Footer -->
     <div style="background:#f7f1e6;padding:16px 32px;text-align:center;">
       <p style="margin:0;color:#999;font-size:11px;">
-        أُرسلت هذه الرسالة تلقائياً من موقع روضة قناديل العلم — ${new Date().toLocaleDateString("ar-OM", { year: "numeric", month: "long", day: "numeric" })}
+        أُرسلت هذه الرسالة تلقائياً من موقع مدرسة قناديل العلم (مرحلة الروضة) — ${new Date().toLocaleDateString("ar-OM", { year: "numeric", month: "long", day: "numeric" })}
       </p>
     </div>
 

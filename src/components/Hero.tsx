@@ -22,14 +22,14 @@ const heroImages = [
   {
     src: "/images/school-exterior-hero-desktop.png",
     fallback: "/images/school-exterior-hero-desktop.png",
-    alt: "مبنى روضة قناديل العلم في صحار",
+    alt: "مبنى مدرسة قناديل العلم (مرحلة الروضة) في صحار",
     mobilePosition: "52% 42%",
     desktopPosition: "center 38%",
   },
   {
     src: "/images/kindergarten-hero.png",
     fallback: "/images/kindergarten-hero.png",
-    alt: "بيئة التعلم في روضة قناديل العلم",
+    alt: "بيئة التعلم في مدرسة قناديل العلم (مرحلة الروضة)",
     mobilePosition: "48% 40%",
     desktopPosition: "center 36%",
   },

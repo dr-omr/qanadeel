@@ -9,7 +9,7 @@ import { buildWhatsappMessage, buildWhatsappUrl } from "@/lib/whatsapp";
 export const metadata: Metadata = {
   title: `تواصل معنا | ${schoolInfo.shortName}`,
   description:
-    "تواصل مع روضة قناديل العلم عبر نموذج خطوات سهل — بريد إلكتروني وواتساب في آنٍ واحد.",
+    "تواصل مع مدرسة قناديل العلم (مرحلة الروضة) عبر نموذج خطوات سهل — بريد إلكتروني وواتساب في آنٍ واحد.",
 };
 
 const contactCards = [

@@ -76,7 +76,7 @@ export function PwaManager() {
         <div className="min-w-0 flex-1">
           <p className="text-sm font-extrabold text-brand-deep">أضف التطبيق للشاشة</p>
           <p className="mt-0.5 text-xs leading-5 text-brand-calm">
-            ثبّت روضة قناديل العلم كتطبيق للوصول السريع
+            ثبّت مدرسة قناديل العلم (مرحلة الروضة) كتطبيق للوصول السريع
           </p>
         </div>
         <button

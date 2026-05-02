@@ -184,7 +184,7 @@ export function Footer() {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="موقع روضة قناديل العلم"
+            title="موقع مدرسة قناديل العلم (مرحلة الروضة)"
             className="grayscale-[25%] opacity-75 transition-opacity duration-500 hover:opacity-90"
           />
         </div>

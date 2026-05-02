@@ -154,7 +154,7 @@ export function InfoSection() {
             icon={<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>}
             eyebrow="الموقع"
             value={schoolInfo.address}
-            description="روضة قناديل العلم — صحار / الجفرة، سلطنة عمان"
+            description="مدرسة قناديل العلم (مرحلة الروضة) — صحار / الجفرة، سلطنة عمان"
             href={schoolInfo.mapUrl}
             hrefLabel="فتح الخريطة"
             hrefExternal

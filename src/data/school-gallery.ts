@@ -35,7 +35,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: "national-day-performance-01",
     src: "/images/school-gallery/events/national-day-performance-01.jpeg",
-    alt: "طفلة تؤدي عرضًا في احتفال العيد الوطني في روضة قناديل العلم",
+    alt: "طفلة تؤدي عرضًا في احتفال العيد الوطني في مدرسة قناديل العلم (مرحلة الروضة)",
     title: "عرض العيد الوطني",
     description:
       "أطفال الروضة يشاركون بعروض جميلة في احتفالات العيد الوطني العُماني.",
@@ -55,7 +55,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: "national-day-celebration-01",
     src: "/images/school-gallery/events/national-day-celebration-01.jpeg",
-    alt: "بنات يحتفلن بالعيد الوطني في روضة قناديل العلم",
+    alt: "بنات يحتفلن بالعيد الوطني في مدرسة قناديل العلم (مرحلة الروضة)",
     title: "فرحة العيد الوطني",
     description:
       "أجواء احتفالية مفعمة بالفرح والحب الوطني في رحاب الروضة.",
@@ -65,7 +65,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: "national-day-celebration-02",
     src: "/images/school-gallery/events/national-day-celebration-02.jpeg",
-    alt: "أطفال في احتفال العيد الوطني في روضة قناديل العلم",
+    alt: "أطفال في احتفال العيد الوطني في مدرسة قناديل العلم (مرحلة الروضة)",
     title: "لحظات وطنية",
     description:
       "أطفال الروضة في أزيائهم الوطنية أثناء الاحتفال بالعيد الوطني.",
@@ -84,7 +84,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: "national-day-family-01",
     src: "/images/school-gallery/events/national-day-family-01.jpeg",
-    alt: "عائلة تشارك في احتفال العيد الوطني بروضة قناديل العلم",
+    alt: "عائلة تشارك في احتفال العيد الوطني بمدرسة قناديل العلم (مرحلة الروضة)",
     title: "مشاركة أولياء الأمور",
     description:
       "العائلات تشارك أطفالها فرحة الاحتفال بالعيد الوطني في الروضة.",
@@ -93,7 +93,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: "national-day-art-02",
     src: "/images/school-gallery/events/national-day-art-02.jpeg",
-    alt: "طفلة تشير إلى لوحة فنية في معرض العيد الوطني بروضة قناديل العلم",
+    alt: "طفلة تشير إلى لوحة فنية في معرض العيد الوطني بمدرسة قناديل العلم (مرحلة الروضة)",
     title: "معرض فني وطني",
     description:
       "إبداعات الأطفال الفنية في معرض العيد الوطني العُماني.",
@@ -116,17 +116,17 @@ export const galleryImages: GalleryImage[] = [
   {
     id: "graduation-ceremony-01",
     src: "/images/school-gallery/events/graduation-ceremony-01.jpeg",
-    alt: "حفل تخرج أطفال روضة قناديل العلم 2026",
+    alt: "حفل تخرج أطفال مدرسة قناديل العلم (مرحلة الروضة) 2026",
     title: "حفل التخرج",
     description:
-      "لحظات فخر واحتفال بتخرج أطفالنا من روضة قناديل العلم.",
+      "لحظات فخر واحتفال بتخرج أطفالنا من مدرسة قناديل العلم (مرحلة الروضة).",
     category: "events",
     featured: true,
   },
   {
     id: "graduation-ceremony-02",
     src: "/images/school-gallery/events/graduation-ceremony-02.jpeg",
-    alt: "طفلة متخرجة بقبعة التخرج في روضة قناديل العلم",
+    alt: "طفلة متخرجة بقبعة التخرج في مدرسة قناديل العلم (مرحلة الروضة)",
     title: "مبروك التخرج",
     description:
       "طفلة متخرجة ترتدي رداء التخرج الأزرق وتحمل باقة ورد.",
@@ -145,7 +145,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: "graduation-ceremony-04",
     src: "/images/school-gallery/events/graduation-ceremony-04.jpeg",
-    alt: "طفلة بزي التخرج الكستنائي في روضة قناديل العلم",
+    alt: "طفلة بزي التخرج الكستنائي في مدرسة قناديل العلم (مرحلة الروضة)",
     title: "فخر التخرج",
     description:
       "طفلة ترتدي رداء التخرج وتحمل باقة ورد احتفالاً بإنهاء مرحلة الروضة.",
@@ -158,7 +158,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: "ramadan-haq-allaila-01",
     src: "/images/school-gallery/events/ramadan-haq-allaila-01.jpeg",
-    alt: "طفل يحتفل بحق الليلة في رمضان بروضة قناديل العلم",
+    alt: "طفل يحتفل بحق الليلة في رمضان بمدرسة قناديل العلم (مرحلة الروضة)",
     title: "حق الليلة – رمضان",
     description:
       "أجواء رمضانية جميلة واحتفال حق الليلة مع أطفال الروضة.",
@@ -195,7 +195,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: "ramadan-decoration-01",
     src: "/images/school-gallery/events/ramadan-decoration-01.jpeg",
-    alt: "ديكور رمضاني في روضة قناديل العلم",
+    alt: "ديكور رمضاني في مدرسة قناديل العلم (مرحلة الروضة)",
     title: "أجواء رمضان",
     description:
       "ديكورات رمضانية تقليدية مع إضاءة نجمية وسلال خوص وحلويات.",
@@ -208,7 +208,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: "birthday-celebration-01",
     src: "/images/school-gallery/events/birthday-celebration-01.jpeg",
-    alt: "حفلة عيد ميلاد في روضة قناديل العلم",
+    alt: "حفلة عيد ميلاد في مدرسة قناديل العلم (مرحلة الروضة)",
     title: "احتفال عيد ميلاد",
     description:
       "لحظات سعيدة من احتفالات أعياد ميلاد الأطفال داخل الروضة.",
@@ -240,7 +240,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: "first-day-girls-01",
     src: "/images/school-gallery/classrooms/first-day-girls-01.jpeg",
-    alt: "بنات في أول يوم دراسي بروضة قناديل العلم",
+    alt: "بنات في أول يوم دراسي بمدرسة قناديل العلم (مرحلة الروضة)",
     title: "أول يوم – بنات",
     description:
       "ابتسامات البنات في أول يوم دراسي مع ورود وهدايا الترحيب.",
@@ -268,7 +268,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: "first-day-girl-01",
     src: "/images/school-gallery/classrooms/first-day-girl-01.jpeg",
-    alt: "طفلة في أول يوم دراسي بروضة قناديل العلم",
+    alt: "طفلة في أول يوم دراسي بمدرسة قناديل العلم (مرحلة الروضة)",
     title: "أول يوم – بنت",
     description:
       "طفلة بزيها المدرسي الأنيق في أول يوم لها بالروضة.",
@@ -308,7 +308,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: "facility-courtyard-01",
     src: "/images/school-gallery/facilities/facility-courtyard-01.jpeg",
-    alt: "ساحة روضة قناديل العلم الداخلية مع عشب صناعي وجدران ملونة",
+    alt: "ساحة مدرسة قناديل العلم (مرحلة الروضة) الداخلية مع عشب صناعي وجدران ملونة",
     title: "ساحة الروضة",
     description:
       "ساحة داخلية واسعة بعشب صناعي وأعمدة مزينة وجدران تعليمية ملونة.",

@@ -9,7 +9,7 @@ import { schoolInfo } from "@/data/school-info";
 export const metadata: Metadata = {
   title: `عن الروضة | ${schoolInfo.shortName}`,
   description:
-    "نبذة عن روضة قناديل العلم الخاصة للتعليم المبكر ورؤيتها ورسالتها وبيئتها التعليمية في سلطنة عمان.",
+    "نبذة عن مدرسة قناديل العلم الخاصة للتعليم المبكر (مرحلة الروضة) ورؤيتها ورسالتها وبيئتها التعليمية في سلطنة عمان.",
 };
 
 export default function AboutPage() {
@@ -21,7 +21,7 @@ export default function AboutPage() {
             <div className="relative aspect-[4/3] overflow-hidden rounded-[1.65rem]">
               <Image
                 src={schoolInfo.heroImagePath}
-                alt="واجهة روضة قناديل العلم الخاصة للتعليم المبكر في صحار"
+                alt="واجهة مدرسة قناديل العلم الخاصة للتعليم المبكر (مرحلة الروضة) في صحار"
                 fill
                 sizes="(max-width: 1024px) 100vw, 46vw"
                 className="object-cover object-center"
@@ -164,17 +164,17 @@ export default function AboutPage() {
             {[
               {
                 src: "/images/school-gallery/events/national-day-performance-01.jpeg",
-                alt: "عرض أطفال في احتفال العيد الوطني بروضة قناديل العلم",
+                alt: "عرض أطفال في احتفال العيد الوطني بمدرسة قناديل العلم (مرحلة الروضة)",
                 label: "فعاليات الروضة",
               },
               {
                 src: "/images/school-gallery/classrooms/first-day-girls-01.jpeg",
-                alt: "أول يوم دراسي لأطفال روضة قناديل العلم",
+                alt: "أول يوم دراسي لأطفال مدرسة قناديل العلم (مرحلة الروضة)",
                 label: "أول يوم دراسي",
               },
               {
                 src: "/images/school-gallery/events/graduation-ceremony-01.jpeg",
-                alt: "حفل تخرج أطفال روضة قناديل العلم",
+                alt: "حفل تخرج أطفال مدرسة قناديل العلم (مرحلة الروضة)",
                 label: "حفل التخرج",
               },
             ].map((img) => (

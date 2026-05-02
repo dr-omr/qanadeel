@@ -10,7 +10,7 @@ import { schoolInfo } from "@/data/school-info";
 export const metadata: Metadata = {
   title: `التسجيل | ${schoolInfo.shortName}`,
   description:
-    "خطوات التسجيل والمستندات المطلوبة ونموذج واتساب لروضة قناديل العلم الخاصة للتعليم المبكر في سلطنة عمان.",
+    "خطوات التسجيل والمستندات المطلوبة ونموذج واتساب لمدرسة قناديل العلم الخاصة للتعليم المبكر (مرحلة الروضة) في سلطنة عمان.",
 };
 
 export default function AdmissionPage() {
@@ -34,7 +34,7 @@ export default function AdmissionPage() {
             <div className="relative mt-6 aspect-[16/9] overflow-hidden rounded-[1.75rem] border border-brand-line/30 shadow-[0_12px_36px_rgba(23,72,58,0.08)]">
               <Image
                 src="/images/school-gallery/events/national-day-celebration-01.jpeg"
-                alt="أطفال في فعالية بروضة قناديل العلم"
+                alt="أطفال في فعالية بمدرسة قناديل العلم (مرحلة الروضة)"
                 fill
                 sizes="(max-width: 1024px) 100vw, 46vw"
                 className="object-cover"

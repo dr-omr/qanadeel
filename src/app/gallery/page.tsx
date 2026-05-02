@@ -5,7 +5,7 @@ import { GalleryPageClient } from "./GalleryPageClient";
 export const metadata: Metadata = {
   title: `معرض الصور | ${schoolInfo.shortName}`,
   description:
-    "معرض صور روضة قناديل العلم الخاصة للتعليم المبكر — لمحات من بيئة التعلم، الأنشطة، اللعب، الفعاليات، والمرافق.",
+    "معرض صور مدرسة قناديل العلم الخاصة للتعليم المبكر (مرحلة الروضة) — لمحات من بيئة التعلم، الأنشطة، اللعب، الفعاليات، والمرافق.",
 };
 
 export default function GalleryPage() {

@@ -376,7 +376,7 @@ export function GalleryPageClient() {
           </span>
 
           <h1 className="mt-4 text-[clamp(1.8rem,5vw,3.2rem)] font-extrabold leading-[1.3] text-white">
-            لمحات من بيئة روضة قناديل العلم
+            لمحات من بيئة مدرسة قناديل العلم (مرحلة الروضة)
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-8 text-white/60 sm:text-lg">
             اضغط أي صورة لعرضها بحجم كامل — أو شاهد المعرض كقصة متتالية.

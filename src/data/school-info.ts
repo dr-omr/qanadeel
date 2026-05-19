@@ -78,6 +78,7 @@ export const schoolInfo = {
   navLinks: [
     { label: "الرئيسية", href: "/" },
     { label: "عن الروضة", href: "/about" },
+    { label: "المعرض", href: "/gallery" },
     { label: "الرسوم", href: "/fees" },
     { label: "التسجيل", href: "/admission" },
     { label: "السياسات", href: "/policies" },
@@ -86,6 +87,7 @@ export const schoolInfo = {
   ] satisfies NavLink[],
   mobileNavLinks: [
     { label: "الرئيسية", href: "/" },
+    { label: "المعرض", href: "/gallery" },
     { label: "الرسوم", href: "/fees" },
     { label: "التسجيل", href: "/admission" },
     { label: "السياسات", href: "/policies" },

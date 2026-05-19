@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { AppCard } from "@/components/AppCard";
+import { GalleryPreviewSection } from "@/components/GalleryPreviewSection";
 import { Hero } from "@/components/Hero";
 import { SectionHeader } from "@/components/SectionHeader";
 import { SmartActionButton } from "@/components/SmartActionButton";
@@ -139,6 +140,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <GalleryPreviewSection />
 
       <section className="bg-[linear-gradient(180deg,#F7F1E6,#fffcf5)] px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
         <div className="mx-auto grid max-w-7xl gap-5 lg:grid-cols-[0.9fr_1.1fr]">

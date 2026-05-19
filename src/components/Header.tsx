@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import { schoolInfo } from "@/data/school-info";
 
 const mobileDrawerLinks = schoolInfo.navLinks.filter(
-  (link) => link.href === "/about",
+  (link) => !["/", "/contact"].includes(link.href),
 );
 
 export function Header() {

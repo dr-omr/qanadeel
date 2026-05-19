@@ -2,11 +2,12 @@
 
 import type { LucideIcon } from "lucide-react";
 import {
+  Camera,
   ClipboardCheck,
   Home,
   MessageCircle,
   ReceiptText,
-  ShieldCheck,
+  Star,
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -19,9 +20,10 @@ type MobileNavItem = {
 
 const mobileNavItems: MobileNavItem[] = [
   { label: "الرئيسية", href: "/", icon: Home },
+  { label: "الصور", href: "/gallery", icon: Camera },
   { label: "الرسوم", href: "/fees", icon: ReceiptText },
   { label: "التسجيل", href: "/admission", icon: ClipboardCheck },
-  { label: "السياسات", href: "/policies", icon: ShieldCheck },
+  { label: "الآراء", href: "/testimonials", icon: Star },
   { label: "تواصل", href: "/contact", icon: MessageCircle },
 ];
 
@@ -33,7 +35,7 @@ export function MobileBottomNav() {
       aria-label="تنقل الجوال"
       className="fixed inset-x-0 bottom-0 z-[60] px-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] pt-2 lg:hidden"
     >
-      <div className="mx-auto grid max-w-md grid-cols-5 gap-1 rounded-full border border-white/72 bg-white/88 p-1.5 shadow-[0_-26px_80px_rgba(16,64,45,0.24)] ring-1 ring-brand-deep/5 backdrop-blur-2xl">
+      <div className="mx-auto grid max-w-lg grid-cols-6 gap-1 rounded-full border border-white/72 bg-white/88 p-1.5 shadow-[0_-26px_80px_rgba(16,64,45,0.24)] ring-1 ring-brand-deep/5 backdrop-blur-2xl">
         {mobileNavItems.map((item) => {
           const isActive = pathname === item.href;
           const Icon = item.icon;
@@ -42,7 +44,7 @@ export function MobileBottomNav() {
             <Link
               key={item.href}
               href={item.href}
-              className={`relative flex min-h-[68px] flex-col items-center justify-center gap-1 rounded-full px-1 text-[0.68rem] font-extrabold transition duration-300 active:scale-95 ${
+              className={`relative flex min-h-[64px] flex-col items-center justify-center gap-1 rounded-full px-1 text-[0.62rem] font-extrabold transition duration-300 active:scale-95 ${
                 isActive
                   ? "bg-brand-deep text-white shadow-[0_16px_38px_rgba(16,64,45,0.28)]"
                   : "text-brand-calm hover:bg-brand-paper hover:text-brand-deep"

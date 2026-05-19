@@ -1,14 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import { Tajawal } from "next/font/google";
-import { AnnouncementBar } from "@/components/AnnouncementBar";
 import { ChatBotWidget } from "@/components/ChatBotWidget";
-import { FloatingContactBadge } from "@/components/FloatingContactBadge";
+import { FloatingWhatsappButton } from "@/components/FloatingWhatsappButton";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { MobileBottomNav } from "@/components/MobileBottomNav";
-import { PwaManager } from "@/components/PwaManager";
-import { ScrollProgress } from "@/components/ScrollProgress";
-import { SplashScreen } from "@/components/SplashScreen";
 import { schoolInfo } from "@/data/school-info";
 import "./globals.css";
 
@@ -56,58 +52,25 @@ export const metadata: Metadata = {
     ],
   },
 };
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
-    name: schoolInfo.officialName,
-    alternateName: schoolInfo.shortName,
-    url: "https://qandeel-school-site.vercel.app",
-    logo: "https://qandeel-school-site.vercel.app/branding/logo-full.png",
-    image: "https://qandeel-school-site.vercel.app/images/school-exterior-hero-desktop.png",
-    description: schoolInfo.seoDescription,
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "صحار",
-      addressRegion: "الجفرة",
-      addressCountry: "OM",
-    },
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: `+968${schoolInfo.phone}`,
-      contactType: "customer service",
-      availableLanguage: "Arabic",
-    },
-    sameAs: [`https://wa.me/${schoolInfo.whatsappInternational}`],
-  };
-
   return (
     <html
       lang="ar-OM"
       dir="rtl"
       className={`${tajawal.variable} h-full scroll-smooth antialiased`}
     >
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </head>
       <body className="flex min-h-full flex-col">
-        <div className="flex min-h-full flex-col bg-brand-ivory pb-[calc(88px+env(safe-area-inset-bottom))] lg:pb-0">
-          <AnnouncementBar />
+        <div className="flex min-h-full flex-col bg-brand-ivory pb-[calc(120px+env(safe-area-inset-bottom))] lg:pb-0">
           <Header />
-          <ScrollProgress />
           {children}
-          <SplashScreen />
+          <FloatingWhatsappButton />
           <ChatBotWidget />
-          <FloatingContactBadge />
           <MobileBottomNav />
-          <PwaManager />
           <Footer />
         </div>
       </body>

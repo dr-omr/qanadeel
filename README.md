@@ -113,11 +113,45 @@ src/app/api/chat/health/route.ts
 /fees
 /admission
 /policies
+/testimonials
+/admin/testimonials
 /contact
 ```
 
 كما تمت إضافة Manifest وأيقونات PWA ليعمل الموقع كتطبيق ويب قابل للإضافة على
 شاشة الهاتف.
+
+## آراء أولياء الأمور والمعلمين
+
+نظام الآراء يعمل بالمراجعة قبل النشر:
+
+```txt
+POST /api/testimonials
+GET /api/testimonials
+GET /api/admin/testimonials
+PATCH /api/admin/testimonials/[id]
+DELETE /api/admin/testimonials/[id]
+```
+
+أي مشاركة جديدة تحفظ بالحالة `pending`، ولا تظهر للعامة إلا بعد اعتمادها من
+لوحة الإدارة في:
+
+```txt
+/admin/testimonials
+```
+
+متغيرات البيئة المقترحة للإنتاج:
+
+```txt
+UPSTASH_REDIS_REST_URL=
+UPSTASH_REDIS_REST_TOKEN=
+TESTIMONIALS_ADMIN_TOKEN=
+TESTIMONIALS_NOTIFICATION_WEBHOOK_URL=
+```
+
+في حال عدم ضبط Upstash يستخدم المشروع ملفًا محليًا للتطوير في
+`.data/testimonials.json`. هذا مناسب للتطوير أو الاستضافة الذاتية فقط، أما
+الإنتاج على بيئات Serverless فيحتاج تخزينًا دائمًا مثل Upstash Redis.
 
 ## النشر
 

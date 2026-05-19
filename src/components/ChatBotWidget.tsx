@@ -196,7 +196,7 @@ export function ChatBotWidget() {
         type="button"
         onClick={() => setIsOpen(true)}
         aria-label="فتح مساعد قناديل العلم"
-        className="fixed bottom-[calc(82px+env(safe-area-inset-bottom))] left-3 z-[55] inline-flex min-h-[2.75rem] items-center gap-2 rounded-full border border-white/60 bg-white/88 px-3 text-xs font-extrabold text-brand-deep shadow-[0_12px_36px_rgba(16,64,45,0.18)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-0.5 hover:bg-white active:scale-95 sm:px-4 sm:text-sm lg:bottom-6 lg:left-6 lg:min-h-[3rem]"
+        className="fixed bottom-[calc(96px+env(safe-area-inset-bottom))] left-4 z-[55] inline-flex min-h-[3.25rem] items-center gap-2 rounded-full border border-white/70 bg-white/90 px-3 text-xs font-extrabold text-brand-deep shadow-[0_20px_50px_rgba(16,64,45,0.22)] backdrop-blur-xl transition hover:-translate-y-1 hover:bg-white sm:px-4 sm:text-sm lg:bottom-6 lg:left-6"
       >
         <span className="relative flex size-8 items-center justify-center rounded-full bg-brand-deep text-white shadow-inner sm:size-9">
           <Bot className="size-5" aria-hidden="true" />

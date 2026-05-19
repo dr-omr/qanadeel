@@ -84,7 +84,7 @@ export function ContactSection({ compact = false }: ContactSectionProps) {
                 <div className="relative aspect-[4/3] overflow-hidden rounded-[1.65rem]">
                   <Image
                     src={schoolInfo.heroImagePath}
-                    alt="واجهة مدرسة قناديل العلم الخاصة للتعليم المبكر (مرحلة الروضة) في صحار"
+                    alt="واجهة روضة قناديل العلم الخاصة للتعليم المبكر في صحار"
                     fill
                     sizes="(max-width: 1024px) 100vw, 42vw"
                     className="object-cover object-center"

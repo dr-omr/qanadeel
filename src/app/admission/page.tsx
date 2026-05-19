@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { ClipboardCheck, FileCheck2 } from "lucide-react";
 import { AdmissionDocuments } from "@/components/AdmissionDocuments";
 import { IconBadge, PremiumCard } from "@/components/PremiumCard";
@@ -10,7 +9,7 @@ import { schoolInfo } from "@/data/school-info";
 export const metadata: Metadata = {
   title: `التسجيل | ${schoolInfo.shortName}`,
   description:
-    "خطوات التسجيل والمستندات المطلوبة ونموذج واتساب لمدرسة قناديل العلم الخاصة للتعليم المبكر (مرحلة الروضة) في سلطنة عمان.",
+    "خطوات التسجيل والمستندات المطلوبة ونموذج واتساب لروضة قناديل العلم الخاصة للتعليم المبكر في سلطنة عمان.",
 };
 
 export default function AdmissionPage() {
@@ -30,20 +29,6 @@ export default function AdmissionPage() {
               إجراءات التأكيد والمستندات والرسوم. تأكيد التسجيل والمقاعد يتم
               عبر إدارة الروضة.
             </p>
-            {/* Visual reinforcement */}
-            <div className="relative mt-6 aspect-[16/9] overflow-hidden rounded-[1.75rem] border border-brand-line/30 shadow-[0_12px_36px_rgba(23,72,58,0.08)]">
-              <Image
-                src="/images/school-gallery/events/national-day-celebration-01.jpeg"
-                alt="أطفال في فعالية بمدرسة قناديل العلم (مرحلة الروضة)"
-                fill
-                sizes="(max-width: 1024px) 100vw, 46vw"
-                className="object-cover"
-              />
-              <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-black/40 to-transparent" />
-              <p className="absolute bottom-3 right-4 text-xs font-extrabold text-white drop-shadow-sm">
-                من أجواء الروضة
-              </p>
-            </div>
           </div>
           <LeadForm
             title="بدء طلب التسجيل"

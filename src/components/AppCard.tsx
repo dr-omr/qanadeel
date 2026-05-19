@@ -30,19 +30,19 @@ type AppCardProps = {
 
 const variants: Record<AppCardVariant, string> = {
   default:
-    "border-brand-line/80 bg-white/88 text-brand-deep shadow-[0_16px_48px_rgba(23,72,58,0.08)]",
+    "border-brand-line bg-white/88 text-brand-deep shadow-[0_20px_60px_rgba(23,72,58,0.09)]",
   elevated:
-    "border-brand-line/80 bg-[linear-gradient(145deg,rgba(255,255,255,0.96),rgba(247,241,230,0.78))] text-brand-deep shadow-[0_20px_64px_rgba(23,72,58,0.10)]",
+    "border-brand-line bg-[linear-gradient(145deg,rgba(255,255,255,0.96),rgba(247,241,230,0.78))] text-brand-deep shadow-[0_28px_90px_rgba(23,72,58,0.13)]",
   glass:
-    "border-white/25 bg-white/12 text-white shadow-[0_20px_64px_rgba(0,0,0,0.14)] backdrop-blur-xl",
+    "border-white/30 bg-white/14 text-white shadow-[0_24px_78px_rgba(0,0,0,0.16)] backdrop-blur-xl",
   feature:
-    "border-brand-line/80 bg-[linear-gradient(145deg,rgba(255,255,255,0.94),rgba(167,191,168,0.15))] text-brand-deep shadow-[0_18px_56px_rgba(23,72,58,0.08)]",
-  fee: "border-brand-deep/12 bg-brand-deep text-white shadow-[0_22px_72px_rgba(23,72,58,0.22)]",
+    "border-brand-line bg-[linear-gradient(145deg,rgba(255,255,255,0.94),rgba(167,191,168,0.18))] text-brand-deep shadow-[0_22px_72px_rgba(23,72,58,0.10)]",
+  fee: "border-brand-deep/15 bg-brand-deep text-white shadow-[0_28px_90px_rgba(23,72,58,0.24)]",
   contact:
-    "border-brand-line/80 bg-white/92 text-brand-deep shadow-[0_16px_52px_rgba(23,72,58,0.08)]",
+    "border-brand-line bg-white/92 text-brand-deep shadow-[0_20px_64px_rgba(23,72,58,0.10)]",
   policy:
-    "border-brand-line/80 bg-brand-ivory/92 text-brand-deep shadow-[0_14px_44px_rgba(23,72,58,0.06)]",
-  mini: "border-brand-line/80 bg-[#fffcf5]/92 text-brand-deep shadow-[0_10px_30px_rgba(23,72,58,0.05)]",
+    "border-brand-line bg-brand-ivory/92 text-brand-deep shadow-[0_18px_54px_rgba(23,72,58,0.08)]",
+  mini: "border-brand-line bg-[#fffcf5]/92 text-brand-deep shadow-[0_12px_36px_rgba(23,72,58,0.07)]",
 };
 
 function CardShell({
@@ -98,32 +98,32 @@ export function AppCard({
     <CardShell
       href={href}
       external={external}
-      className={`group relative overflow-hidden rounded-[1.75rem] border p-4 shadow-sm transition-all duration-300 active:scale-[0.99] sm:rounded-[2rem] sm:p-5 before:pointer-events-none before:absolute before:inset-x-6 before:top-0 before:h-px before:bg-gradient-to-l before:from-transparent before:via-brand-warm/60 before:to-transparent after:pointer-events-none after:absolute after:-left-10 after:-top-10 after:size-28 after:rounded-full after:bg-brand-warm/15 after:blur-2xl ${variants[variant]} ${clickable} ${className}`}
+      className={`group relative overflow-hidden rounded-[2rem] border p-5 shadow-sm transition duration-300 active:scale-[0.99] sm:p-6 before:pointer-events-none before:absolute before:inset-x-8 before:top-0 before:h-px before:bg-gradient-to-l before:from-transparent before:via-brand-warm/70 before:to-transparent after:pointer-events-none after:absolute after:-left-12 after:-top-12 after:size-36 after:rounded-full after:bg-brand-warm/18 after:blur-2xl ${variants[variant]} ${clickable} ${className}`}
     >
       <div className="relative">
         <span
           aria-hidden="true"
-          className="absolute -right-5 top-1 h-12 w-0.5 rounded-full bg-brand-warm/30 opacity-60 transition-all group-hover:h-16"
+          className="absolute -right-6 top-1 h-16 w-1 rounded-full bg-brand-warm/40 opacity-70 transition group-hover:h-24"
         />
-        <div className="flex items-start justify-between gap-3">
-          {icon ? <IconBadge icon={icon} tone={iconTone} size="sm" className="sm:size-12 sm:rounded-2xl" /> : null}
+        <div className="flex items-start justify-between gap-4">
+          {icon ? <IconBadge icon={icon} tone={iconTone} /> : null}
           {metadata ? (
-            <div className="rounded-full border border-current/8 bg-white/12 px-2.5 py-0.5 text-[0.7rem] font-extrabold text-current/70">
+            <div className="rounded-full border border-current/10 bg-white/14 px-3 py-1 text-xs font-extrabold text-current/75">
               {metadata}
             </div>
           ) : null}
         </div>
-        {highlight ? <div className="mt-4">{highlight}</div> : null}
+        {highlight ? <div className="mt-5">{highlight}</div> : null}
         {title ? (
-          <h3 className="mt-4 text-lg font-extrabold leading-[1.6] text-current sm:text-xl sm:leading-8">
+          <h3 className="mt-5 text-xl font-extrabold leading-8 text-current">
             {title}
           </h3>
         ) : null}
         {description ? (
           <p
-            className={`mt-2.5 text-[0.9rem] leading-[1.85] sm:text-base sm:leading-8 ${
+            className={`mt-3 leading-8 ${
               variant === "fee" || variant === "glass"
-                ? "text-white/80"
+                ? "text-white/82"
                 : "text-brand-calm"
             }`}
           >
@@ -131,7 +131,7 @@ export function AppCard({
           </p>
         ) : null}
         {children}
-        {action ? <div className="mt-4">{action}</div> : null}
+        {action ? <div className="mt-5">{action}</div> : null}
       </div>
     </CardShell>
   );

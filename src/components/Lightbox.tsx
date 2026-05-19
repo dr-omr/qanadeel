@@ -29,13 +29,12 @@ export function Lightbox({
   const touchStartX = useRef<number | null>(null);
   const touchStartY = useRef<number | null>(null);
 
-  // Animate in
   useEffect(() => {
-    if (image) {
-      requestAnimationFrame(() => setIsVisible(true));
-    } else {
-      setIsVisible(false);
-    }
+    const frame = requestAnimationFrame(() => {
+      setIsVisible(Boolean(image));
+    });
+
+    return () => cancelAnimationFrame(frame);
   }, [image]);
 
   const handleClose = useCallback(() => {

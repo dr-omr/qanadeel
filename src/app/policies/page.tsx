@@ -7,7 +7,7 @@ import { schoolInfo } from "@/data/school-info";
 export const metadata: Metadata = {
   title: `السياسات | ${schoolInfo.shortName}`,
   description:
-    "سياسات القبول والحضور والسلامة والتواصل والرسوم في مدرسة قناديل العلم الخاصة للتعليم المبكر (مرحلة الروضة) في سلطنة عمان.",
+    "سياسات القبول والحضور والسلامة والتواصل والرسوم في روضة قناديل العلم الخاصة للتعليم المبكر في سلطنة عمان.",
 };
 
 export default function PoliciesPage() {

@@ -11,7 +11,7 @@ import { buildWhatsappMessage, buildWhatsappUrl } from "@/lib/whatsapp";
 export const metadata: Metadata = {
   title: `الرسوم | ${schoolInfo.shortName}`,
   description:
-    "تفاصيل الرسوم الدراسية ورسوم الخدمات والنقل في مدرسة قناديل العلم الخاصة للتعليم المبكر (مرحلة الروضة) في سلطنة عمان.",
+    "تفاصيل الرسوم الدراسية ورسوم الخدمات والنقل في روضة قناديل العلم الخاصة للتعليم المبكر في سلطنة عمان.",
 };
 
 export default function FeesPage() {
